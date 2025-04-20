@@ -1,0 +1,112 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Interactive Boxes */
+.interactive-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  max-height: 80px;
+  position: relative;
+}
+
+.box-header {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.box-body {
+  opacity: 0;
+  padding: 0 20px 20px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.interactive-box.active {
+  max-height: 280px;
+}
+
+.interactive-box.active .box-body {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.option-group {
+  margin: 15px 0;
+}
+
+label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Color buttons */
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+
+.color {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.color.red {
+  background: #ff4d4d;
+}
+
+.color.blue {
+  background: #4da6ff;
+}
+
+.color.green {
+  background: #28c76f;
+}
+
+/* Size buttons */
+.size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.size-options button {
+  padding: 6px 14px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.size-options button:hover {
+  background: #dcdcdc;
+}
